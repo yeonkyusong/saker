@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>201968010 송연규</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #3b3a3a;
+            color: #c0a1a1;
+        }
+        /* margin, padding을 0으로 설정해 빈 공간이 안남도록 하였고, 배경과 글씨의 색을 입혔습니다*/
+        nav {
+            width: 100%;
+            background-color: rgb(122, 178, 134);
+            color: white;
+            height: 50px;
+            padding: 20px 0;
+            border-radius: 0 0 0 15px;
+        }
+        /* nav안에 div 선택에서는 글씨의 색을 흰색으로 바꿨고, 위치를 오른쪽으로 지정했습니다. 그리고 margin을 이용해 글씨가 겹치지 않게 하였습니다*/
+        nav>a,
+        nav>div {
+            cursor: pointer;
+            color: #ffffff;
+            float: right;
+            line-height: 80px;
+            margin: 0 20px;
+        }
+        /* 위와 똑같이 위치를 왼쪾에 배정하였고, 글씨크기와 위치를 설정하였습니다*/
+        nav>a:first-child {
+            float: left;
+            font-size: 30px;
+            line-height: 50px;
+        }
+        /* 드롭메뉴안에 메뉴들의 글씨와 위치를 조정해준 코드입니다, display를 none으로 바꿔서 마우스를 올려야지만 보이게 설정하였습니다*/
+        .items {
+            position: absolute;
+            display: none;
+            margin-top: -10px;
+            width: 80px;
+            text-align: center;
+            line-height: 40px;
+            z-index: 1;
+        }
+        /* 드롭메뉴 안의 메뉴 박스의 크기, 박스의 배경색과 테두리의 색을 설정하였습니다 */
+        .item {
+            height: 40px;
+            background-color: rgb(74, 182, 74);
+            border: 1px solid #fff;
+        }
+        /* 드롭메뉴 안에 메뉴 박스를 만든 코드입니다.*/
+        .dropdown:hover .items {
+            display: block;
+        }
+        /*position fixed로 위치를 고정해주었고, 오른쪽에 크기와 색 글씨 위치를 설정한 코드입니다.*/
+        #navbar {
+            position: fixed;
+            width: 102px;
+            height: 100%;
+            background-color: rgb(71, 159, 93);
+            text-align: center;
+            right: 0;
+        }
+        /* 글씨 위치를 지정하였고 박스의 크기와 색,테두리 색을 지정하였습니다*/
+        #navbar>a {
+            line-height: 40px;
+            display: block;
+            width: 100px;
+            height: 40px;
+            background-color: rgb(176, 214, 163);
+            border: 1px solid rgb(255, 255, 255);
+        }
+        /* 컨테이너 요소의 padding을 상하 50px, 좌우 0px로 지정하였고, 
+           좌우 넓이를 100%에서 navbar의102px을 뻈습니다. 그리고 글씨를 가운데로 지정하였고, 1px 검은색 테두리를 설정했습니다*/
+        .container {
+            padding: 50px 0;
+            width: calc(100% - 102px);
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+        /* table의 margin을 상하 0 가로는 자동으로 설정하여 컨테이너 내에서 테이블을 수평으로 중앙에 배치시켰습니다
+           table에 글씨색과 배경색을 설정하였습니다*/
+        table {
+            margin: 0 auto;
+            background-color: #2e2e2e;
+            color: #e2e2e2;
+        }
+        /* 시간표의 과목에 배경 색을 넣었습니다*/
+        #서버관리 {
+            background-color: rgb(247, 131, 131);
+        }
+
+        #웹프 {
+            background-color: rgb(178, 178, 135);
+        }
+
+        #컴구 {
+            background-color: rgb(180, 118, 52);
+        }
+
+        #임베디드 {
+            background-color: rgb(90, 147, 119);
+        }
+
+        #언어론 {
+            background-color: rgb(90, 125, 147);
+        }
+
+        #세미나 {
+            background-color: rgb(111, 196, 196);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <!--nav안에 글씨를 넣은 코드입니다-->
+        <a href="#">201968010 송연규</a>
+        <a class="dropdown" href="./예약.html"><!--예약의 주소를 지정하였습니다-->
+            예약
+        </a>
+        <!--드롭메뉴 안에 메뉴들을 만든 코드입니다-->
+        <div class="dropdown">
+            드롭메뉴
+            <div class="items">
+                <div class="item">
+                    메뉴1
+                </div>
+                <div class="item">
+                    메뉴2
+                </div>
+                <div class="item">
+                    메뉴3
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--오른쪽에 메뉴 예약 코드입니다-->
+    <div id="navbar">
+        <a href="#">메뉴</a>
+        <a href="./예약.html">예약</a>
+    </div>
+     <!--div class 속성을 "container"로 설정하여 style을 지정할 수 있게 하였습니다-->
+    <div class="container">
+        <h1>안녕하세요!</h1>
+        <h3>저는 이런걸 배우고 있어요.</h3>
+        <li>웹 프로그래밍</li>
+        <li>모바일 프로그래밍</li>
+        <li>임베디드 시스템</li>
+    </div>
+    <!--마찬가지로 div class 속성을 "container"로 설정하여 style을 지정할 수 있게 하였습니다-->
+    <div class="container">
+        <h2>나의 시간표</h2>
+        <h3>저의 시간표를 공개합니다.</h3>
+        <!--table 테두리를 5px로 지정했습니다 -->
+        <table border="5px">
+            <tr>
+                <p>
+                    <!--colspan을 이용해 시간표 수평 6개를 합쳤습니다-->
+                    <td colspan="6" span>나의 시간표</td>
+                </p>
+            </tr>
+            <tr>
+                <td></td>
+                <td>월</td>
+                <td>화</td>
+                <td>수</td>
+                <td>목</td>
+                <td>금</td>
+            </tr>
+            <tr>
+                <td>9:00 ~ 9:30</td> <!--rowspan을 이용해 서버관리 셀 수직 3개를 합쳤습니다-->
+                <td id="서버관리" rowspan="3">서버관리</td>
+                <!--윗쪽 월화수목금 빈공간셀들을 합쳤습니다-->
+                <td rowspan="11"></td>
+                <td rowspan="8"></td>
+                <td rowspan="3"></td>
+                <td rowspan="11"></td>
+            </tr>
+            <tr>
+                <td>9:30 ~ 10:00</td>
+            </tr>
+            <tr>
+                <td>10:00 ~ 10:30</td>
+            </tr>
+            <tr>
+                <td>10:30 ~ 11:00</td> 
+                <td rowspan="5"></td>
+                <td id="서버관리" rowspan="3">서버관리</td><!--목요일 서버관리 셀을 합쳤습니다-->
+            </tr>
+            <tr>
+                <td>11:00 ~ 11:30</td>
+            </tr>
+            <tr>
+                <td>11:30 ~ 12:00</td>
+            </tr>
+            <tr>
+                <td>12:00 ~ 12:30</td>
+                <td rowspan="2"></td><!--자연스럽게 보이기위해 목요일 12:00~13:00까지의 셀들을 합쳤습니다-->
+            </tr>
+            <tr>
+                <td>12:30 ~ 13:00</td>
+            </tr>
+            <tr>
+                <td>13:00 ~ 13:30</td>
+                <td id="웹프" rowspan="3">웹 프로그래밍</td><!--전부 수직 셀을 3개씩 합쳤습니다-->
+                <td id="컴구" rowspan="3">컴퓨터 구조</td>
+                <td id="임베디드" rowspan="3">임베디드 시스템</td>
+            </tr>
+            <tr>
+                <td>13:30 ~ 14:00</td>
+            </tr>
+            <tr>
+                <td>14:00 ~ 14:30</td>
+            </tr>
+            <tr>
+                <td>14:30 ~ 15:00</td><!--14:30 이후의 셀들을 3개씩 합쳤습니다.-->
+                <td id="컴구" rowspan="3">컴퓨터 구조</td>
+                <td id="임베디드" rowspan="3">임베디드 시스템</td>
+                <td id="웹프" rowspan="3">웹 프로그래밍</td>
+                <td rowspan="7"></td>
+                <td id="언어론" rowspan="3">프로그래밍 언어론</td>
+            </tr>
+            <tr>
+                <td>15:00 ~ 15:30</td>
+            </tr>
+            <tr>
+                <td>15:30 ~ 16:00</td>
+            </tr>
+            <tr>
+                <td>16:00 ~ 16:30</td><!--각각 맞게 셀들을 수직으로 합쳤습니다-->
+                <td rowspan="4"></td>
+                <td id="언어론" rowspan="3">프로그래밍 언어론</td>
+                <td id="세미나" rowspan="2">세미나</td>
+                <td rowspan="4"></td>
+            </tr>
+            <tr>
+                <td>16:30 ~ 17:00</td>
+            </tr>
+            <tr>
+                <td>17:00 ~ 17:30</td>
+                <td rowspan="3"></td>
+            </tr>
+            <tr>
+                <td>17:30 ~ 18:00</td>
+                <td rowspan="1"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
